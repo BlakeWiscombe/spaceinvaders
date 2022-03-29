@@ -1,16 +1,16 @@
 extends KinematicBody2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
+var speed = 500
 func _ready():
-	pass # Replace with function body.
+	set_physics_process(true)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _physics_process(delta):
+	var collidedObject = move_and_collide(Vector2(0 ,-speed*delta))
+	if (collidedObject):
+		print(collidedObject.collider.name)
+		if "Enemy" in collidedObject.collider.name:
+			collidedObject.get_collider().queue_free()
+			GlobalVariables.scoringInformation["currentScore"] +=10
+			print (GlobalVariables.scoringInformation["currentScore"])
+		queue_free()		
