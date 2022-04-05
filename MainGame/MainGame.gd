@@ -16,7 +16,7 @@ func _ready():
 		print(currentTimer)
 	print ("Game Over")
 
-	#GlobalVariables.previousScores.push_front( GlobalVariables.scoringInformation["currentScore"])
-	#print(GlobalVariables.previousScores)
-	#get_tree().change_scene("res://endscene.tscn")
+	GlobalVariables.previousScores.push_front( GlobalVariables.scoringInformation["currentScore"])
+	print(GlobalVariables.previousScores)
+
 
