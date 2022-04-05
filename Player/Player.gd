@@ -23,5 +23,5 @@ func _physics_process(delta):
 func _process(delta):
 	if Input.is_action_pressed("fire"):
 		var bulletInstance = bulletSource.instance()
-		bulletInstance.position = Vector2(position.x-0, position.y)
+		bulletInstance.position = Vector2(position.x-0, position.y-75)
 		get_tree().get_root().add_child(bulletInstance)
