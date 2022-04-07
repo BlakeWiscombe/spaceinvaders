@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://menu/Noto_Sans_JP (1)/NotoSansJP-Black.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://menu/download.jpeg" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://menu/Options.gd" type="Script" id=4]
 [ext_resource path="res://menu/Menu.gd" type="Script" id=5]
 [ext_resource path="res://menu/startgamebutton.gd" type="Script" id=6]
+[ext_resource path="res://menu/pure-white-background-85a2a7fd.jpg" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -55,6 +56,9 @@ grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Space invaders clone 2022"
 align = 1
 
@@ -137,8 +141,25 @@ margin_right = 1277.0
 margin_bottom = 200.0
 
 [node name="Label" type="Label" parent="layout/credits"]
-margin_right = 207.0
+margin_right = 1277.0
 margin_bottom = 14.0
+size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Copyright Blake Wiscombe 2022"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_top = 184.0
+margin_right = 1284.0
+margin_bottom = 728.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="layout/main/buttons/Quit" to="layout/main/buttons/Quit" method="_on_Quit_pressed"]
