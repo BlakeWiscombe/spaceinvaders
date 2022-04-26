@@ -20,3 +20,5 @@ func _ready():
 	print(GlobalVariables.previousScores)
 
 
+func _on_Button_pressed():
+	pass # Replace with function body.
