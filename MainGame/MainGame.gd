@@ -18,7 +18,3 @@ func _ready():
 
 	GlobalVariables.previousScores.push_front( GlobalVariables.scoringInformation["currentScore"])
 	print(GlobalVariables.previousScores)
-
-
-func _on_Button_pressed():
-	pass # Replace with function body.

@@ -164,4 +164,5 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="layout/main/buttons/GameScenes/Options" to="layout/main/buttons/GameScenes/Options" method="_on_Options_pressed"]
 [connection signal="pressed" from="layout/main/buttons/Quit" to="layout/main/buttons/Quit" method="_on_Quit_pressed"]
