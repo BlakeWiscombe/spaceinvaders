@@ -18,3 +18,6 @@ func _ready():
 
 	GlobalVariables.previousScores.push_front( GlobalVariables.scoringInformation["currentScore"])
 	print(GlobalVariables.previousScores)
+
+func _process(delta):
+	$HUD/
