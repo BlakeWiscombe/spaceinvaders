@@ -15,9 +15,12 @@ func _ready():
 		currentTimer = currentTimer - 1
 		print(currentTimer)
 	print ("Game Over")
+	get_tree().change_scene("res://Game over scene.tscn")
 
 	GlobalVariables.previousScores.push_front( GlobalVariables.scoringInformation["currentScore"])
 	print(GlobalVariables.previousScores)
 
 func _process(delta):
-	$HUD/
+	#$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
+	if get_tree().get_nodes_in_group("enemy").size() == 0:
+		get_tree().change_scene("res://WinScene.tscn")
