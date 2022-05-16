@@ -11,10 +11,10 @@ func _ready():
 func _physics_process(delta):
 	var collidedObject = move_and_collide(Vector2(0, +speed*delta*0.4))
 	if (collidedObject):
-		#print("Enemy collide: ",collidedObject.collider.name)
+		print("Enemy collide: ",collidedObject.collider.name)
 		if "Enemy" in collidedObject.collider.name:
 			pass
-			#collidedObject.get_collider().queue_free() #Don't kill the enemies.
+			collidedObject.get_collider().queue_free() #Don't kill the enemies.
 		else:
 			queue_free()
 			GlobalVariables.enemyBulletInstanceCount -= 1
