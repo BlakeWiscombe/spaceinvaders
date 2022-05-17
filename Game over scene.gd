@@ -1,6 +1,5 @@
+#the retry button that returns the player back to the main game when certain conditions are met.
 extends Control
-
-
 
 
 
