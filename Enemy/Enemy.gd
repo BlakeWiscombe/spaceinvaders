@@ -19,14 +19,14 @@ func _colliding(area):
 		get_parent().speed = get_parent().speed * -1 
 
 func _process(delta):
-#	while (true):
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	var my_random_number = rng.randf_range(2.0, 30.0)
-	#print("time: ",my_random_number)
-	yield(get_tree().create_timer(my_random_number), "timeout")
-	if GlobalVariables.enemyBulletInstanceCount < 5:
-		var bulletInstance = bullet.instance()
+	while (true):
+		var rng = RandomNumberGenerator.new()
+		rng.randomize()
+		var my_random_number = rng.randf_range(2.0, 30.0)
+		print("time: ",my_random_number)
+		yield(get_tree().create_timer(my_random_number), "timeout")
+		if GlobalVariables.enemyBulletInstanceCount < 5:
+			var bulletInstance = bullet.instance()
 		
-		bulletInstance.position = Vector2(global_position.x, global_position.y+20)
-		get_tree().get_root().add_child(bulletInstance)
+			bulletInstance.position = Vector2(global_position.x, global_position.y+20)
+			get_tree().get_root().add_child(bulletInstance)

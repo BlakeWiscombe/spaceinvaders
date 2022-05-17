@@ -1,3 +1,5 @@
+#The Speed of the enemies
+#Movement from left to right side of the screen
 extends Node2D
 
 var speed = 100
@@ -8,6 +10,3 @@ func _ready():
 	
 func _physics_process(delta):
 	global_position.x  += speed * delta
-	pass
-	#move_and_collide(Vector2(speed * delta,0))
-	
