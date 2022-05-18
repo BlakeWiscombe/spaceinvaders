@@ -24,7 +24,7 @@ func _process(delta): #this function determines the amount of time that passes b
 	while (true):
 		var rng = RandomNumberGenerator.new() #The RNG makes each enemies shoot at different times
 		rng.randomize()
-		var my_random_number = rng.randf_range(2.0, 30.0) #The RNG shoots between 2 seconds after satrt and 30 seconds after the start of the game
+		var my_random_number = rng.randf_range(2.0, 30.0) #The RNG determines when the bullet shoots, this will be between 2 seconds after start, up to 30 seconds after the start of the game
 		print("time: ",my_random_number)
 		yield(get_tree().create_timer(my_random_number), "timeout")
 		if GlobalVariables.enemyBulletInstanceCount < 5:

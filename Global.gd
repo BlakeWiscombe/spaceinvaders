@@ -1,3 +1,4 @@
+#this script holds certain information and feedback from the game and stores the information in an array
 extends Node
 
 var rapidFire = false
@@ -10,7 +11,8 @@ var enemyBulletInstanceCount = 0
 
 var previousScores = []
 
-
+#the information held here is the top three high scores
+#this part of the script holds the current score of the current game
 var scoringInformation = {
 	"currentScore": 0,
 	"currentPlayer": "User",

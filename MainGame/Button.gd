@@ -1,3 +1,5 @@
+#this script runs every time that the 'main menu' button is pressed
+#once pressed this script takes the player back to the main menu
 extends Button
 
 

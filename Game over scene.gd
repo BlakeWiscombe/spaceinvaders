@@ -1,4 +1,5 @@
-#the retry button that returns the player back to the main game when certain conditions are met.
+#this script runs for every press of the retry button
+#when the player loses this screen will show giving them the option to retry the level
 extends Control
 
 
