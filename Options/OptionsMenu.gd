@@ -1,12 +1,8 @@
+#the below script runs everytime that the player presses the 'rapid fire' button
 extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
+#this function determines when to activate rapid fire
+#when the button is pressed the rapid fire option activates allowing the player to hold down fire and continue to shoot
 func _ready():
 	$Layout/RapidFireSelect.pressed = GlobalVariables.rapidFire
 	

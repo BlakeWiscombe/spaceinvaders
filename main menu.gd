@@ -1,4 +1,5 @@
-#this script runs everytime the player presses the button
+#this script will run everytime that this button is pressed 
+#this script will changes the scenes for the player 
 extends Button
 
 

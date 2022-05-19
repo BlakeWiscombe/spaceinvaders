@@ -1,4 +1,5 @@
-#this script runs everytime that the plauyer presses the retry button
+#this script runs for every press of the retry button
+#when the player loses this screen will show giving them the option to retry the level
 extends Control
 
 
