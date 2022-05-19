@@ -16,5 +16,5 @@ func _ready():
 #	pass
 
 
-func _on_RapidFireSelect_toggled(button_pressed):
+func _on_RapidFireSelect_toggled(button_pressed): 
 	GlobalVariables.rapidFire = button_pressed
