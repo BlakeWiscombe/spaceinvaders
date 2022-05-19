@@ -8,5 +8,5 @@ func _ready(): #this function determines that the enemies will have physics (Mov
 	set_physics_process(true)
 	
 	
-func _physics_process(delta): #this function is the movement speed of the enemies
-	global_position.x  += speed * delta
+func _physics_process(delta): #this function determines the direction for the enemies 
+	global_position.x  += speed * delta #the x axis is chosen for the enemy movement
