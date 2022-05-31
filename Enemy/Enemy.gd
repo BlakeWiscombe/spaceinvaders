@@ -3,7 +3,7 @@
 extends KinematicBody2D
 
 var bullet = preload("res://Bullet-Enemy/Bullet-Enemy.tscn") #the bullet is a file saved on the project. this calls upon the shape of the bullet
-
+var canShoot = false
 
 func _ready():
 	print ("enemy ready")
@@ -21,7 +21,7 @@ func _colliding(area): #This function determines what happens when the enemies c
 		get_parent().speed = get_parent().speed * -1 
 
 func _process(delta): #this function determines the amount of time that passes before the enmies start to fire at the player
-	while (true):
+	if canShoot:
 		var rng = RandomNumberGenerator.new() #The RNG makes each enemies shoot at different times
 		rng.randomize()
 		var my_random_number = rng.randf_range(2.0, 30.0) #The RNG determines when the bullet shoots, this will be between 2 seconds after start, up to 30 seconds after the start of the game
