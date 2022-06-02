@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Button.gd" type="Script" id=1]
 [ext_resource path="res://WinScene.gd" type="Script" id=2]
 [ext_resource path="res://you win.jpeg" type="Texture" id=3]
+[ext_resource path="res://return to main menu.gd" type="Script" id=4]
 
 [node name="Win scene" type="Control"]
 anchor_right = 1.0
@@ -27,7 +28,7 @@ __meta__ = {
 
 [node name="Retry" type="Button" parent="Layout"]
 margin_right = 1273.0
-margin_bottom = 356.0
+margin_bottom = 176.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Retry"
@@ -35,6 +36,14 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="return to main menu" type="Button" parent="Layout"]
+margin_top = 180.0
+margin_right = 1273.0
+margin_bottom = 356.0
+size_flags_vertical = 3
+text = "Return to main menu"
+script = ExtResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 show_behind_parent = true
@@ -47,4 +56,6 @@ texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="Layout/Retry" to="Layout/Retry" method="_on_Retry_pressed"]
+[connection signal="pressed" from="Layout/return to main menu" to="Layout/return to main menu" method="_on_return_to_main_menu_pressed"]
