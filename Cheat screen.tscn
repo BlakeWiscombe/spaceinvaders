@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://back to main menu.gd" type="Script" id=1]
+[ext_resource path="res://Cheat screen.gd" type="Script" id=2]
+
+[node name="Cheat screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="layout" type="VBoxContainer" parent="."]
+margin_right = 1277.0
+margin_bottom = 441.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Go to super secret cheat screen" type="Button" parent="layout"]
+margin_right = 1277.0
+margin_bottom = 218.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Enter super secret cheat scene"
+
+[node name="return" type="Button" parent="layout"]
+margin_top = 222.0
+margin_right = 1277.0
+margin_bottom = 441.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "return to main menu"
+script = ExtResource( 1 )
+[connection signal="pressed" from="layout/return" to="." method="_on_return_pressed"]
