@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://back to main menu.gd" type="Script" id=1]
 [ext_resource path="res://Cheat screen.gd" type="Script" id=2]
+[ext_resource path="res://Go to super secret cheat screen.gd" type="Script" id=3]
 
 [node name="Cheat screen" type="Control"]
 anchor_right = 1.0
@@ -24,6 +25,7 @@ margin_bottom = 218.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Enter super secret cheat scene"
+script = ExtResource( 3 )
 
 [node name="return" type="Button" parent="layout"]
 margin_top = 222.0
@@ -33,4 +35,5 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "return to main menu"
 script = ExtResource( 1 )
+[connection signal="pressed" from="layout/Go to super secret cheat screen" to="." method="_on_Go_to_super_secret_cheat_screen_pressed"]
 [connection signal="pressed" from="layout/return" to="." method="_on_return_pressed"]
