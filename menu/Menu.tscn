@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://menu/Noto_Sans_JP (1)/NotoSansJP-Black.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://menu/Start game.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://menu/Options.gd" type="Script" id=4]
 [ext_resource path="res://menu/Menu.gd" type="Script" id=5]
 [ext_resource path="res://menu/startgamebutton.gd" type="Script" id=6]
+[ext_resource path="res://menu/Cheat screen.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -17,6 +18,9 @@ font_data = ExtResource( 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 1 )
 
 [node name="Main menu" type="Control"]
@@ -87,7 +91,7 @@ size_flags_vertical = 3
 
 [node name="Start game" type="Button" parent="layout/main/buttons/GameScenes"]
 margin_right = 1277.0
-margin_bottom = 50.0
+margin_bottom = 32.0
 grow_horizontal = 0
 grow_vertical = 0
 size_flags_horizontal = 3
@@ -101,14 +105,27 @@ __meta__ = {
 scene_to_load = "res://MainGame/MainGame.tscn"
 
 [node name="Options" type="Button" parent="layout/main/buttons/GameScenes"]
-margin_top = 54.0
+margin_top = 36.0
 margin_right = 1277.0
-margin_bottom = 105.0
+margin_bottom = 68.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
 text = "Options"
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cheat screen" type="Button" parent="layout/main/buttons/GameScenes"]
+margin_top = 72.0
+margin_right = 1277.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+text = "Cheat screen"
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -119,7 +136,7 @@ margin_right = 1277.0
 margin_bottom = 214.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Quit"
 script = ExtResource( 3 )
 __meta__ = {
@@ -155,4 +172,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="layout/main/buttons/GameScenes/Options" to="layout/main/buttons/GameScenes/Options" method="_on_Options_pressed"]
+[connection signal="pressed" from="layout/main/buttons/GameScenes/Cheat screen" to="layout/main/buttons/GameScenes/Cheat screen" method="_on_Cheat_screen_pressed"]
 [connection signal="pressed" from="layout/main/buttons/Quit" to="layout/main/buttons/Quit" method="_on_Quit_pressed"]
