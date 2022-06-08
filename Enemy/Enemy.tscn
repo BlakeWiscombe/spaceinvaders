@@ -11,9 +11,7 @@ extents = Vector2( 43.3061, 40.9474 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 42.7014, 39.6576 )
 
-[node name="Enemy" type="KinematicBody2D" groups=[
-"enemy",
-]]
+[node name="Enemy" type="KinematicBody2D" groups=["enemy"]]
 position = Vector2( 0.911194, -1.91614 )
 script = ExtResource( 2 )
 
@@ -33,10 +31,10 @@ shape = SubResource( 2 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true
-cast_to = Vector2( 50, 150 )
+cast_to = Vector2( 40, 140 )
 script = ExtResource( 3 )
 
 [node name="RayCast2D2" type="RayCast2D" parent="."]
 enabled = true
-cast_to = Vector2( -50, 150 )
+cast_to = Vector2( -40, 140 )
 script = ExtResource( 4 )

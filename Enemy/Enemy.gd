@@ -3,7 +3,7 @@
 extends KinematicBody2D
 
 var bullet = preload("res://Bullet-Enemy/Bullet-Enemy.tscn") #the bullet is a file saved on the project. this calls upon the shape of the bullet
-var canShoot = false
+var canShoot = true
 
 func _ready():
 	print ("enemy ready")
